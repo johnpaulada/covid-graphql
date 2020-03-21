@@ -1,0 +1,13 @@
+type Query {
+    countryStats: [CountryStats!]!
+}
+
+type CountryStats {
+    country: String
+    confirmed: Int
+    recovered: Int
+    deaths: Int,
+    confirmedByDay: [Int!]!
+    recoveredByDay: [Int!]!
+    deathsByDay: [Int!]!
+}

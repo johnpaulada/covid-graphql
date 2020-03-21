@@ -1,0 +1,26 @@
+{
+  "name": "covid-graphql",
+  "version": "0.1.0",
+  "description": "GraphQL server for COVID Updates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "graphpack",
+    "build": "graphpack build",
+    "start": "node ./build/index.js"
+  },
+  "keywords": [
+    "covid",
+    "ncov",
+    "coronavirus",
+    "graphql"
+  ],
+  "author": "John Paul Ada",
+  "license": "MIT",
+  "devDependencies": {
+    "graphpack": "^1.0.9"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
