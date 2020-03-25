@@ -1,13 +1,22 @@
 type Query {
-    countryStats: [CountryStats!]!
+    countryStats(filter: CountryFilter): [CountryStats!]!
 }
 
 type CountryStats {
     country: String
-    confirmed: Int
+    cases: Int,
+    todayCases: Int
+    deaths: Int
+    todayDeaths: Int
     recovered: Int
-    deaths: Int,
-    confirmedByDay: [Int!]!
-    recoveredByDay: [Int!]!
-    deathsByDay: [Int!]!
+    active: Int
+    critical: Int
+    casesPerOneMillion: Int
+    deathsPerOneMillion: Int
+    countryCode: String
+    confirmed: Int
+}
+
+input CountryFilter {
+    country: String
 }
